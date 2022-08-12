@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import styles from './layout.module.css';
+import utilStyles from '../styles/utils.module.css';
+import Link from 'next/link';
 import clientPromise from '../lib/mongodb'
 
 
@@ -6,7 +9,7 @@ export default function Home({ isConnected }) {
   return (
     <Layout home>
   
-        <h1 className="title">
+        <h1>
           Welcome to <a href="https://nextjs.org">Next.js with MongoDB!</a>
         </h1>
 
