@@ -4,7 +4,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-export const siteTitle = 'Mind Canvass';
+
+export const siteTitle = 'Library of Solomon';
 
 export default function Layout({ children, home }) {
   return (
@@ -12,37 +13,17 @@ export default function Layout({ children, home }) {
       <Head>
         <meta
           name="description"
-          content="A personal blog built on Next.js"
+          content="A sample library navigation app built with Next.js and MongoDB."
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              priority
-              src="/Images/realm_of_dreams.png"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={siteTitle}
-            />
             <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
           </>
         ) : (
           <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/Images/realm_of_dreams_b.png"
-                  height= {144}
-                  width= {144}
-                  className={utilStyles.borderCircle}
-                  alt="realm of dreams"
-                />
-              </a>
-            </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{siteTitle}</a>
@@ -51,20 +32,43 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+      
+      <nav>
+          <ul className= {utilStyles.navList}>
+            <li id="Home" className= {utilStyles.navItem}>
+              <Link href= '/'>
+                  <a className= {utilStyles.navName}>Home</a>
+              </Link>
+            </li>
+            <li id="Directory" className= {utilStyles.navItem}>
+              <Link href= '/directory'>
+                  <a className= {utilStyles.navName}>Directory</a>
+              </Link>
+            </li>
+            <li id="About" className= {utilStyles.navItem}>
+              <Link href= '/about'>
+                  <a className= {utilStyles.navName}>About</a>
+              </Link>
+            </li>
+          </ul>
+      </nav>
+
       <main>{children}</main>
+      
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a>HOME</a>
           </Link>
         </div>
       )}
+      
       <footer id="footer" className={styles.footer}>
         <a className={utilStyles.logo} href="https://twitter.com/LeeGee64">
         <Image
               src="/Images/logos/2021-Twitter-logo-blue.png"
-              height= {60}
-              width= {60}
+              height= {30}
+              width= {30}
               className={utilStyles.logo}
               alt="Twitter"
             />
@@ -72,8 +76,8 @@ export default function Layout({ children, home }) {
         <a className={utilStyles.logo} href="https://www.instagram.com/who_is_lee888/">
           <Image
               src="/Images/logos/Instagram_Glyph_Gradient.png"
-              height= {60}
-              width= {60}
+              height= {30}
+              width= {30}
               className={utilStyles.logo}
               alt="Instagram"
             />
@@ -81,8 +85,8 @@ export default function Layout({ children, home }) {
         <a className={utilStyles.logo} href="https://github.com/LeeGee64">
           <Image
               src="/Images/logos/GitHub-Mark-64px.png"
-              height= {60}
-              width= {60}
+              height= {30}
+              width= {30}
               className={utilStyles.logo}
               alt="GitHub"
             />
@@ -90,8 +94,8 @@ export default function Layout({ children, home }) {
         <a className={utilStyles.logo} href="https://www.linkedin.com/in/leland-gill">
           <Image
               src="/Images/logos/In-Blue-34.png"
-              height= {60}
-              width= {60}
+              height= {30}
+              width= {30}
               className={utilStyles.logo}
               alt="LinkedIn"
             />

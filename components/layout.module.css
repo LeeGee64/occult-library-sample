@@ -19,7 +19,7 @@
   .footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: right;
     margin-top: 5rem;
   }
   

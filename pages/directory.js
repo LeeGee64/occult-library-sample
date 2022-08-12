@@ -1,5 +1,5 @@
  import { connectToDatabase } from "../util/mongodb";
-
+ import Image from 'next/image';
 
 export default function Directory({ bookList }) {
   
@@ -8,7 +8,7 @@ export default function Directory({ bookList }) {
   "U","V","W","X","Y","Z"]; 
   
  return (
-  <div>
+  <Layout>
     <h1>Library Directory</h1>
       <ul>
         {alphaDirectory.map((letterHead) => (
@@ -28,7 +28,7 @@ export default function Directory({ bookList }) {
         </li>
         ))}
       </ul>
-    </div>
+    </Layout>
  )}
 
 
