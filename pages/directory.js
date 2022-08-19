@@ -33,11 +33,6 @@ export default function Directory({ bookList }) {
               {bookList.filter((book)=> {if(book.title.split('')[0] === letterHead.toString() ){return book}}).map((book) => (
                 <li id= {book.isbn}>
                   <BookCard book= {book}></BookCard>
-                  {/* <h2>{book.title}</h2>
-                  <p>{book.author}</p>
-                  <p>{book.isbn}</p>
-                  <p>{book.read_link}</p>
-                  <img src={ `Images/book_covers/${book.cover_image_src}`}></img> */}
                 </li>
               ))}
             </ul>
