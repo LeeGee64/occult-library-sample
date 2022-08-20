@@ -3,7 +3,6 @@
  import utilStyles from '../styles/utils.module.css';
  import Layout from '../components/layout';
  import Link from 'next/link';
- import Image from 'next/image';
  import BookCard from '../components/bookCard';
 
 export default function Directory({ bookList }) {

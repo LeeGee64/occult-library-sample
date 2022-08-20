@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '../components/layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
@@ -49,9 +48,7 @@ export default function Home({ bookList }) {
           <Link href= "/booksearch">
             <a>here.</a>
           </Link>
-        </p>      
-
-      
+        </p>            
         
         <p>Don't know how to start? Click the button below for a random selection</p>
         <button type= "button" onClick={ () => getRandom({ bookList })}>
@@ -61,13 +58,6 @@ export default function Home({ bookList }) {
       
     </Layout> 
 )}
-
-// export async function getRandom() {
-//   const searchList  = await getStaticProps();    
-//   let randSelect = searchList[Math.random()*searchList.length]; 
-
-//   return (<BookCard book= {randSelect}></BookCard>);
-// }
 
 export async function getStaticProps() {
   const { db } = await connectToDatabase();

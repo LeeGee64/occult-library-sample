@@ -18,26 +18,16 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
       </Head>
       <header className={styles.header}>
-        {home ? (
-          <>
-            <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
-          </>
-        ) : (
-          <>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{siteTitle}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      
       <nav>
           <ul className= {utilStyles.navList}>
             <li id="Home" className= {utilStyles.navItem}>
               <Link href= '/'>
                   <a className= {utilStyles.navName}>Home</a>
+              </Link>
+            </li>
+            <li id="BookSearch" className= {utilStyles.navItem}>
+              <Link href= '/booksearch'>
+                  <a className= {utilStyles.navName}>Search</a>
               </Link>
             </li>
             <li id="Directory" className= {utilStyles.navItem}>
@@ -52,6 +42,22 @@ export default function Layout({ children, home }) {
             </li>
           </ul>
       </nav>
+        
+        {home ? (
+          <>
+            <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
+          </>
+        ) : (
+          <>
+            <h2 className={utilStyles.headingLg}>
+              <Link href="/">
+                <a className={utilStyles.colorInherit}>{siteTitle}</a>
+              </Link>
+            </h2>
+          </>
+        )}
+      </header>
+    
 
       <main>{children}</main>
       
