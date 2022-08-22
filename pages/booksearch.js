@@ -2,7 +2,6 @@ import { connectToDatabase } from "../util/mongodb";
 import styles from '../components/layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Layout from '../components/layout';
-import Link from 'next/link';
 import BookCard from '../components/bookCard';
 import React, { useState } from 'react';
 
@@ -16,17 +15,47 @@ export default function BookSearch({ bookList }) {
         const {value} = e.currentTarget;
         setSearchSubject(value);
         console.log(value);
+        
+        // let resultArray = [];
+        // let regex = "";
+        
+        // if(searchContent){
+        //     regex = new RegExp(`^(${searchContent})`,"i");
+        // };
+        
+        // resultArray = setSearchArray(searchArray.concat(bookList
+        //     .filter(sr => {if(sr[value].match(regex)){return sr}})
+        //     .map(sr => {return (<li id={sr.isbn}><BookCard book= {sr}></BookCard> </li>)})));
+        
+        // if(resultArray.length){
+        //     setSearchArray(resultArray);
+        // }
+        // else{
+        //     setSearchArray([]);
+        // }
     };
 
     function searchTextChange(e){
         const {value} = e.currentTarget;
-        let regVal = value.toLowerCase(); 
-        let regex = new RegExp(`^(${regVal})`,"g");
+        let regex = null;
+        let resultArray = [];
+
+        if(value){
+            regex = new RegExp(`^(${value})`,"i");
+        }
+        
         setSearchContent(value);
-        setSearchArray(searchArray.length = 0); 
-        setSearchArray(searchArray.concat(bookList)
-        .filter(sr => {if(sr.title.toLowerCase().match(regex)){return sr}})
-        .map(sr => {return (<li id={sr.isbn}><BookCard book= {sr}></BookCard> </li>)})); 
+        setSearchArray([]);
+
+        resultArray = bookList
+            .filter(sr => {if(sr[searchSubject].match(regex)){return sr}})
+            .map(sr => {return (<li id={sr.isbn}><BookCard book= {sr}></BookCard> </li>)});
+    
+        if(resultArray.length){
+            setSearchArray(searchArray.concat(resultArray));}
+        else{
+            setSearchArray([]); 
+        }
     };
 
 
@@ -41,12 +70,9 @@ return (
             <select id="searchValue" onChange= {e => searchValueChange(e)}>
                 <option value="title">Title</option>
                 <option value="author">Author</option>
-                <option value="isbn">ISBN</option>
             </select>
             
             <input id="searchText" name="searchText" onChange= {e => searchTextChange(e)} value={searchContent}></input>
-            {/* rework the filter */}
-
 
             <ul>{searchArray}</ul>
         </form>
