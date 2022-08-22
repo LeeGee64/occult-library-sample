@@ -15,24 +15,6 @@ export default function BookSearch({ bookList }) {
         const {value} = e.currentTarget;
         setSearchSubject(value);
         console.log(value);
-        
-        // let resultArray = [];
-        // let regex = "";
-        
-        // if(searchContent){
-        //     regex = new RegExp(`^(${searchContent})`,"i");
-        // };
-        
-        // resultArray = setSearchArray(searchArray.concat(bookList
-        //     .filter(sr => {if(sr[value].match(regex)){return sr}})
-        //     .map(sr => {return (<li id={sr.isbn}><BookCard book= {sr}></BookCard> </li>)})));
-        
-        // if(resultArray.length){
-        //     setSearchArray(resultArray);
-        // }
-        // else{
-        //     setSearchArray([]);
-        // }
     };
 
     function searchTextChange(e){
@@ -45,7 +27,6 @@ export default function BookSearch({ bookList }) {
         }
         
         setSearchContent(value);
-        setSearchArray([]);
 
         resultArray = bookList
             .filter(sr => {if(sr[searchSubject].match(regex)){return sr}})
@@ -67,12 +48,12 @@ return (
         <p>Use the form below to search through the library (not case sensitive).</p>
 
         <form onSubmit={e => e.preventDefault()}>
-            <select id="searchValue" onChange= {e => searchValueChange(e)}>
+            <select id="searchValue" onChange= {e => {setSearchArray([]); searchValueChange(e)}}>
                 <option value="title">Title</option>
                 <option value="author">Author</option>
             </select>
             
-            <input id="searchText" name="searchText" onChange= {e => searchTextChange(e)} value={searchContent}></input>
+            <input id="searchText" name="searchText" onChange= {e => {setSearchArray([]); searchTextChange(e)}} value={searchContent}></input>
 
             <ul>{searchArray}</ul>
         </form>
