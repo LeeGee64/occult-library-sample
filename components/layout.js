@@ -61,13 +61,6 @@ export default function Layout({ children, home }) {
 
       <main>{children}</main>
       
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>HOME</a>
-          </Link>
-        </div>
-      )}
       
       <footer id="footer" className={styles.footer}>
         <a className={utilStyles.logo} href="https://twitter.com/LeeGee64">

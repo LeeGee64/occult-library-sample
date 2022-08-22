@@ -49,6 +49,7 @@ export async function getStaticProps() {
     const bookList = await db
       .collection("library_002")
       .find({})
+      .sort( {title: 1} )
       .toArray();
   
       return {
