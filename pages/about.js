@@ -22,8 +22,17 @@ export default function About() {
           </span>
         </div>   
         
-        
-        
+        <h2>The Library</h2>
+        <p></p>
+
+        <h2>The Developer</h2>
+        <p></p>
+
+        <h2>Future Goals</h2>
+        <p></p>
+        <ul></ul>
+        <p></p>
+
       </article>        
         
     </Layout> 
