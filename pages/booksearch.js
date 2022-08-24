@@ -27,11 +27,13 @@ export default function BookSearch({ bookList }) {
         }
         
         setSearchContent(value);
+        setSearchArray(searchArray.length = 0); 
 
         resultArray = bookList
             .filter(sr => {if(sr[searchSubject].match(regex)){return sr}})
             .map(sr => {return (<li id={sr.isbn}><BookCard book= {sr}></BookCard> </li>)});
     
+        
         if(resultArray.length){
             setSearchArray(searchArray.concat(resultArray));}
         else{
@@ -48,12 +50,12 @@ return (
         <p>Use the form below to search through the library (not case sensitive).</p>
 
         <form onSubmit={e => e.preventDefault()}>
-            <select id="searchValue" onChange= {e => {setSearchArray([]); searchValueChange(e)}}>
+            <select id="searchValue" onChange= {e => {searchValueChange(e)}}>
                 <option value="title">Title</option>
                 <option value="author">Author</option>
             </select>
             
-            <input id="searchText" name="searchText" onChange= {e => {setSearchArray([]); searchTextChange(e)}} value={searchContent}></input>
+            <input id="searchText" name="searchText" onChange= {e => {searchTextChange(e)}} value={searchContent}></input>
 
             <ul>{searchArray}</ul>
         </form>

@@ -25,7 +25,7 @@ export default function About() {
         
         <h2>The Library</h2>
 
-        <section className={rowBlock}>
+        <section className={utilStyles.rowBlock}>
         
           <div className={utilStyles.imageBlock}>
             <Image
@@ -55,7 +55,7 @@ export default function About() {
 
         <h2>The Developer</h2>
         
-        <section className={rowBlock}>
+        <section className={utilStyles.rowBlock}>
           
           <div className={utilStyles.imageBlock}>
               <Image
