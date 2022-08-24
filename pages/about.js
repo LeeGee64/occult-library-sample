@@ -2,6 +2,7 @@ import styles from '../components/layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Layout from '../components/layout';
+import Image from 'next/image';
 
 
 export default function About() {
@@ -23,15 +24,74 @@ export default function About() {
         </div>   
         
         <h2>The Library</h2>
-        <p></p>
+
+        <section className={rowBlock}>
+        
+          <div className={utilStyles.imageBlock}>
+            <Image
+                src="/Images/king_solomon.jpeg"
+                height={144}
+                width={300}
+                alt="King Solomon"
+            />
+            <span className={utilStyles.imageCaption}>King Solomon</span>
+          </div>
+          
+          <section>
+            <p>
+              <a href="https://en.wikipedia.org/wiki/Solomon">King Solomon</a> is a prominent figure in Judiasm, Christianity, Islam, and various other belief systems.
+              He is universally regarded as a ruler with unparalled wisdom, vast riches, and a powerful connection to Divine power that granted him mastery of 
+              diverse spiritual forces. This app is made to mirror Solomon's ecclectic understanding of the esoteric and ease the user's exploration of this 
+              vibrant and historied subject matter. 
+            </p>
+
+            <p>
+              This app was built with <a href="https://nextjs.org/">NextJS</a> and animated with <a href="https://www.framer.com/">Framer Motion</a>. 
+              The book data is collected from <a href="https://www.goodreads.com/">Goodreads</a> and stored/called from <a href="https://www.mongodb.com/">MongoDB</a>. 
+            </p>
+          </section>
+
+        </section>
 
         <h2>The Developer</h2>
-        <p></p>
+        
+        <section className={rowBlock}>
+          
+          <div className={utilStyles.imageBlock}>
+              <Image
+                  src="/Images/profile.JPG"
+                  height={144}
+                  width={144}
+                  alt="Lee Gill"
+              />
+              <span className={utilStyles.imageCaption}>Lee Gill</span>
+          </div>
+        
+          <p>
+            I'm Lee Gill, a software developer working in the New Jersey/New York area.
+            This project stemmed from my own passion for Occult studies as well as a desire to learn and master
+            NextJS and React as coding technologies. Outside of programming, I am an activist fighting for police reform 
+            as well as Ethical uses of Open Source Tehcnology. You can find me using the social media links at the bottom 
+            of every page.
+          </p>
+
+        </section>
 
         <h2>Future Goals</h2>
-        <p></p>
-        <ul></ul>
-        <p></p>
+        
+        <p>
+          While building this app was both fun and educational, there are a number of areas I would
+          like to see improved in the future. Here are some prospective optimizations:
+        </p>
+
+        <ul>
+          <li><strong></strong></li>
+        </ul>
+
+        <p>
+          If you have any questions/suggestions regarding this project, or if you're interested in 
+          joining the development team, reach out to me via the social media links.  
+        </p>
 
       </article>        
         

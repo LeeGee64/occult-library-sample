@@ -13,7 +13,7 @@ export default function Home({ bookList }) {
 
   function getRandom({ bookList }){
     let randomSelect = bookList[Math.floor(Math.random()*bookList.length)];
-    setRandomList(randomList.length = 0); 
+    setRandomList([]); 
     setRandomList(randomList.concat(randomSelect));
   }  
 
