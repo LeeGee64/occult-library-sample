@@ -85,12 +85,19 @@ export default function About() {
         </p>
 
         <ul>
-          <li><strong></strong></li>
+          <li><strong>Database Complexity:</strong> Right now, the library is a simple flat database with some key values pulled 
+          from <a href="https://www.goodreads.com/">Goodreads</a>. The book cover images are served to the client directly from the app.
+          In the future, I would like to have more complex relationships between data entries(i.e. similar subjects, same cultures of origin)
+          as well as images stored on a database that can be served when needed. </li>
+          <li><strong>Added Features:</strong> While being able to search through the library by Title and Author is a good start, allowing
+          users to query based on other factors like ISBN will aid in the apps' accessibility. Speaking of accessibility, I also aim to add 
+          tehcnology to allow the visually impared to use the library. Additional features like user-saved lists and a 'like' system can also
+          be useful.</li>
         </ul>
 
         <p>
           If you have any questions/suggestions regarding this project, or if you're interested in 
-          joining the development team, reach out to me via the social media links.  
+          joining the development team, reach out to me via the social media links below.  
         </p>
 
       </article>        
