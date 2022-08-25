@@ -46,7 +46,7 @@ export default function About() {
             </p>
 
             <p>
-              This app was built with <a href="https://nextjs.org/">NextJS</a> and animated with <a href="https://www.framer.com/">Framer Motion</a>. 
+              This app was built with <a href="https://nextjs.org/">Next.js</a> and animated with <a href="https://www.framer.com/">Framer Motion</a>. 
               The book data is collected from <a href="https://www.goodreads.com/">Goodreads</a> and stored/called from <a href="https://www.mongodb.com/">MongoDB</a>. 
             </p>
           </section>
@@ -70,7 +70,7 @@ export default function About() {
           <p>
             I'm Lee Gill, a software developer working in the New Jersey/New York area.
             This project stemmed from my own passion for Occult studies as well as a desire to learn and master
-            NextJS and React as coding technologies. Outside of programming, I am an activist fighting for police reform 
+            <a href="https://nextjs.org/">Next.js</a> and <a href="https://reactjs.org/">React</a> as coding technologies. Outside of programming, I am an activist fighting for police reform 
             as well as Ethical uses of Open Source Tehcnology. You can find me using the social media links at the bottom 
             of every page.
           </p>

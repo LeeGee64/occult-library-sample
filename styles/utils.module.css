@@ -24,11 +24,7 @@
     font-size: 1.2rem;
     line-height: 1.5;
   }
-  
-  .borderCircle {
-    border-radius: 9999px;
-  }
-  
+
   .colorInherit {
     color: inherit;
   }
@@ -50,31 +46,6 @@
   .contentLink {
     font-style:italic;
     color:blue; 
-  }
-  
-  .lightText {
-    color: #666;
-  }
-  
-  .articleContent a {
-    font-weight: 700;
-    font-style: italic;
-    color: rgb(150,150,150);
-  }
-
-  .articleContent img {
-    height: 15rem;
-    width: 17rem;
-    float: left;
-    margin: 1rem;
-  }
-
-  .articleContent h3 {
-    padding: 0.8rem;
-    font-weight: 700;
-    font-style: italic;
-    color: rgb(100,0,100);
-    letter-spacing: 0.1rem;
   }
 
   .logo {
