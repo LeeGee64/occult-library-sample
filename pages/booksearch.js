@@ -1,5 +1,4 @@
 import { connectToDatabase } from "../util/mongodb";
-import styles from '../components/layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Layout from '../components/layout';
 import BookCard from '../components/bookCard';
@@ -45,7 +44,7 @@ export default function BookSearch({ bookList }) {
 
 return (
     <Layout>
-        <h1>Search</h1>
+        <h1 className={utilStyles.pageTitle}>Search</h1>
 
         <p>Use the form below to search through the library (not case sensitive).</p>
 
@@ -57,7 +56,7 @@ return (
             
             <input id="searchText" name="searchText" onChange= {e => {searchTextChange(e)}} value={searchContent}></input>
 
-            <ul>{searchArray}</ul>
+            <ul className={utilStyles.rowBlock}>{searchArray}</ul>
         </form>
     </Layout>
 )}

@@ -1,5 +1,4 @@
  import { connectToDatabase } from "../util/mongodb";
- import styles from '../components/layout.module.css';
  import utilStyles from '../styles/utils.module.css';
  import Layout from '../components/layout';
  import Link from 'next/link';
@@ -13,8 +12,8 @@ export default function Directory({ bookList }) {
   
  return (
   <Layout>
-    <h1>Library Directory</h1>
-    <ul id="alphaDirectory">
+    <h1 className={utilStyles.pageTitle}>Library Directory</h1>
+    <ul className={utilStyles.rowBlock} id="alphaDirectory">
       {alphaDirectory.map((letterHead) => (
         <Link href= {`#${letterHead}`}>
           <li id={`${letterHead}Ref`}><a>{ letterHead }</a></li>
@@ -25,10 +24,10 @@ export default function Directory({ bookList }) {
         {alphaDirectory.map((letterHead) => (
             <li>
               <div>
-                <h2  id={`${letterHead}`}>{ letterHead }</h2>
+                <h2 className={utilStyles.sectionTitle} id={`${letterHead}`}>{ letterHead }</h2>
                 <Link href= "#alphaDirectory"><a>Top</a></Link>
               </div>
-            <ul>
+            <ul className={utilStyles.rowBlock}>
               {bookList.filter((book)=> {if(book.title.split('')[0] === letterHead.toString() ){return book}}).map((book) => (
                 <li id= {book.isbn}>
                   <BookCard book= {book}></BookCard>

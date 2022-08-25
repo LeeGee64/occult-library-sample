@@ -1,6 +1,4 @@
-import styles from '../components/layout.module.css';
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 import Layout from '../components/layout';
 import Image from 'next/image';
 
@@ -11,7 +9,7 @@ export default function About() {
 
     <Layout>
       <article>
-        <h1> About </h1>
+        <h1 className={utilStyles.pageTitle}> About </h1>
 
         <div className={utilStyles.quoteBlock}>
           <p className={utilStyles.quote}>
@@ -23,7 +21,7 @@ export default function About() {
           </span>
         </div>   
         
-        <h2>The Library</h2>
+        <h2 className={utilStyles.sectionTitle}>The Library</h2>
 
         <section className={utilStyles.rowBlock}>
         
@@ -53,7 +51,7 @@ export default function About() {
 
         </section>
 
-        <h2>The Developer</h2>
+        <h2 className={utilStyles.sectionTitle}>The Developer</h2>
         
         <section className={utilStyles.rowBlock}>
           
@@ -77,7 +75,7 @@ export default function About() {
 
         </section>
 
-        <h2>Future Goals</h2>
+        <h2 className={utilStyles.sectionTitle}>Future Goals</h2>
         
         <p>
           While building this app was both fun and educational, there are a number of areas I would
@@ -88,7 +86,7 @@ export default function About() {
           <li><strong>Database Complexity:</strong> Right now, the library is a simple flat database with some key values pulled 
           from <a href="https://www.goodreads.com/">Goodreads</a>. The book cover images are served to the client directly from the app.
           In the future, I would like to have more complex relationships between data entries(i.e. similar subjects, same cultures of origin)
-          as well as images stored on a database that can be served when needed. </li>
+          as well as images stored on a database that can be served when needed.</li>
           <li><strong>Added Features:</strong> While being able to search through the library by Title and Author is a good start, allowing
           users to query based on other factors like ISBN will aid in the apps' accessibility. Speaking of accessibility, I also aim to add 
           tehcnology to allow the visually impared to use the library. Additional features like user-saved lists and a 'like' system can also

@@ -1,4 +1,4 @@
-import styles from '../components/layout.module.css';
+
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Layout from '../components/layout';

@@ -1,8 +1,19 @@
+@font-face {
+  font-family: "Aboreto";
+  src: url("/fonts/Aboreto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("fonts/Lora-VariableFont_wght.ttf");
+  src: url("fonts/Lora-Italic-VariableFont_wght.tff");
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Lora, Aboreto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -12,7 +23,7 @@ a {
 }
 
 a:hover {
-  color: rgb(0,0,180);
+  color: purple;
   text-decoration: underline;
 }
 
