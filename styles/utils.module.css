@@ -2,7 +2,7 @@
     font-size: 2.5rem;
     line-height: 1.2;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.4rem;
     margin: 1rem 0;
   }
   
@@ -41,11 +41,6 @@
   
   .listItem {
     margin: 0 0 1.25rem;
-  }
-
-  .contentLink {
-    font-style:italic;
-    color:blue; 
   }
 
   .logo {

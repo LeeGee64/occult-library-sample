@@ -1,15 +1,16 @@
   .container {
     width: 100%;
     padding: 0 1rem;
-    margin: 3rem auto 6rem;
+    /* margin: 3rem auto 6rem; */
     border: solid 1px rgb(100,100,100);
+    background: black;
   }
   
   .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: solid 1px rgb(100,100,100);
+    border-bottom: solid 1px white;
   }
   
 
@@ -20,7 +21,7 @@
     margin-top: 5rem;
   }
 
-  nav ul {
+  .navList {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -33,12 +34,12 @@
     padding: 1rem;
     font-size: 1.5rem;
     font-weight: 700 400;
-    color: black;
+    color: white;
   }
 
-  .navItem:hover {
-    background-color: purple;
-    color: goldenrod; 
+  .navName:hover {
+    color: goldenrod;
+    text-decoration: none;
   }
   
 @media screen and (max-width:499px){

@@ -16,34 +16,15 @@ export default function Layout({ children, home }) {
           content="A sample library navigation app built with Next.js and MongoDB."
         />
         <meta name="og:title" content={siteTitle} />
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+        <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&display=swap" rel="stylesheet"></link>
       </Head>
+
       <header className={styles.header}>
-      <nav>
-          <ul className= {utilStyles.navList}>
-            <li id="Home" className= {utilStyles.navItem}>
-              <Link href= '/'>
-                  <a className= {utilStyles.navName}>Home</a>
-              </Link>
-            </li>
-            <li id="BookSearch" className= {utilStyles.navItem}>
-              <Link href= '/booksearch'>
-                  <a className= {utilStyles.navName}>Search</a>
-              </Link>
-            </li>
-            <li id="Directory" className= {utilStyles.navItem}>
-              <Link href= '/directory'>
-                  <a className= {utilStyles.navName}>Directory</a>
-              </Link>
-            </li>
-            <li id="About" className= {utilStyles.navItem}>
-              <Link href= '/about'>
-                  <a className= {utilStyles.navName}>About</a>
-              </Link>
-            </li>
-          </ul>
-      </nav>
-        
-        {home ? (
+            
+      {home ? (
           <>
             <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
           </>
@@ -56,6 +37,30 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )}
+      <nav>
+          <ul className= {styles.navList}>
+            <li id="Home" className= {styles.navItem}>
+              <Link href= '/'>
+                  <a className= {styles.navName}>Home</a>
+              </Link>
+            </li>
+            <li id="BookSearch" className= {styles.navItem}>
+              <Link href= '/booksearch'>
+                  <a className= {styles.navName}>Search</a>
+              </Link>
+            </li>
+            <li id="Directory" className= {styles.navItem}>
+              <Link href= '/directory'>
+                  <a className= {styles.navName}>Directory</a>
+              </Link>
+            </li>
+            <li id="About" className= {styles.navItem}>
+              <Link href= '/about'>
+                  <a className= {styles.navName}>About</a>
+              </Link>
+            </li>
+          </ul>
+      </nav>
       </header>
     
 
