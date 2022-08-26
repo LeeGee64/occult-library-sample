@@ -29,11 +29,11 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
-            <h2 className={utilStyles.headingLg}>
+            <h1 className={utilStyles.heading2XL}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{siteTitle}</a>
               </Link>
-            </h2>
+            </h1>
           </>
         )}
       <nav>
