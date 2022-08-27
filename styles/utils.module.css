@@ -29,10 +29,6 @@
     color: inherit;
   }
   
-  .padding1px {
-    padding-top: 1px;
-  }
-  
   .list {
     list-style: none;
     padding: 0;
@@ -46,3 +42,30 @@
   .logo {
     margin: 0.5rem;
   }
+  
+    /* ====================================================   */
+   /*  =================== Search Rules ===================  */
+  /*   ==================================================== */
+
+  .searchSelect {
+    background: black;
+    color: white; 
+    padding: 0.4rem;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    font-style: 'Lora';
+    border-radius: 4px;
+  }
+
+  .searchInput {
+    background: black;
+    color: white; 
+    padding: 0.4rem;
+    font-size: 1rem;
+    font-style: 'Lora';
+    width: 35rem; 
+  }
+
+  /* ====================================================   */
+ /*  =================== About Rules ====================  */
+/*   ==================================================== */

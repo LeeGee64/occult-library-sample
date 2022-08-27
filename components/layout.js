@@ -88,10 +88,10 @@ export default function Layout({ children, home }) {
                 alt="Instagram"
               />
             </a>
-          <a className={utilStyles.logo} href="https://github.com/LeeGee64">
+          <a className={utilStyles.logo} href="https://github.com/LeeGee64/occult-library-sample">
             <Image
                 priority
-                src="/Images/logos/GitHub-Mark-64px.png"
+                src="/Images/logos/GitHub-Mark-Light-64px.png"
                 height= {30}
                 width= {30}
                 className={utilStyles.logo}
