@@ -13,21 +13,21 @@ export default function Directory({ bookList }) {
  return (
   <Layout>
     <h1 className={utilStyles.pageTitle}>Library Directory</h1>
-    <ul className={utilStyles.rowBlock} id="alphaDirectory">
+    <ul className={utilStyles.directory} id="alphaDirectory">
       {alphaDirectory.map((letterHead) => (
         <Link href= {`#${letterHead}`}>
-          <li id={`${letterHead}Ref`}><a>{ letterHead }</a></li>
+          <li className= {utilStyles.directoryTag} id={`${letterHead}Ref`}><a>{ letterHead }</a></li>
         </Link>
       ))}
     </ul>
-      <ul>
+      <ul className={utilStyles.directoryBody}>
         {alphaDirectory.map((letterHead) => (
             <li>
-              <div>
+              <div className= {utilStyles.directoryHeader}>
                 <h2 className={utilStyles.sectionTitle} id={`${letterHead}`}>{ letterHead }</h2>
                 <Link href= "#alphaDirectory"><a>Top</a></Link>
               </div>
-            <ul className={utilStyles.rowBlock}>
+            <ul className={utilStyles.bookGallery}>
               {bookList.filter((book)=> {if(book.title.split('')[0] === letterHead.toString() ){return book}}).map((book) => (
                 <li id= {book.isbn}>
                   <BookCard book= {book}></BookCard>

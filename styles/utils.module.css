@@ -72,6 +72,8 @@
     color: white;
     border-radius: 4px;
     align-self: center;
+    font-style: 'Aboreto', 'Lora', sans-serif;
+    letter-spacing: 0.08rem;
   }
   
   .button:hover {
@@ -83,6 +85,7 @@
     align-self: center;
     list-style-type: none;
   }
+
     /* ====================================================   */
    /*  =================== Search Rules ===================  */
   /*   ==================================================== */
@@ -104,6 +107,46 @@
     font-size: 1rem;
     font-style: 'Lora';
     width: 35rem; 
+  }
+
+  .bookGallery {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    list-style-type: none;
+    overflow-y: scroll;
+    max-width: 80%;
+  }
+
+   /* ====================================================   */
+  /*  ================= Directory Rules ==================  */
+ /*   ==================================================== */
+
+  .directoryTag {
+    font-style: 'Aboreto';
+    font-size: 1.3rem;
+  }
+  
+  .directory {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 80%;
+    justify-content: center;
+    column-gap: 1rem;
+    padding: 2rem;
+  }
+
+  .directoryHeader {
+    display: flex;
+    flex-direction: row;
+    padding: 0.8rem;
+    column-gap: 3rem;
+    align-items: center;
+  }
+
+  .directoryBody {
+    list-style-type: none;
   }
 
   /* ====================================================   */

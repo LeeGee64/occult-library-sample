@@ -1,6 +1,5 @@
 
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 import Layout from '../components/layout';
 import BookCard from '../components/bookCard';
 import { connectToDatabase } from "../util/mongodb";
