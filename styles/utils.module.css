@@ -152,3 +152,60 @@
   /* ====================================================   */
  /*  =================== About Rules ====================  */
 /*   ==================================================== */
+
+.aboutBlock {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5rem;
+  padding: 1.4rem;
+  align-items: center;
+}
+
+.divider {
+  border-top: solid 3px white;
+  margin: 3rem auto;
+  width: 30%
+}
+
+.quoteBlock {
+  display: flex;
+  flex-direction: column;
+  width:60%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-style: italic;
+  margin-bottom: 3rem;
+
+}
+
+.quote {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.quoteSource {
+  letter-spacing: 0.06rem;
+}
+
+.sectionTitle {
+  margin: 2rem; 
+  size: 1.2rem;
+}
+
+.sectionText {
+  width: 70%;
+  margin: auto;
+}
+
+.imageBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.goalItem {
+  margin: 2rem;
+  font-style: italic;
+}
