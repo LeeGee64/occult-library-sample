@@ -20,6 +20,8 @@ export default function About() {
             - 1 Kings 10:23-24, NIV
           </span>
         </section>   
+
+        <hr className={utilStyles.divider}></hr>
         
         <h2 className={utilStyles.sectionTitle}>The Library</h2>
 
