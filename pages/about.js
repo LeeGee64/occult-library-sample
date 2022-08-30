@@ -33,7 +33,6 @@ export default function About() {
                 height={244}
                 width={400}
                 className={utilStyles.aboutImage}
-                placeholder="blur"
                 alt="King Solomon"
             />
             <span className={utilStyles.imageCaption}>King Solomon</span>
