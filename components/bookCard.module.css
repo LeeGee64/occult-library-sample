@@ -1,7 +1,6 @@
 .bookCard {
     border-radius: 10px;
     margin: 1.5rem;
-    /* opacity: 0.4; */
     background-color: rgba(255,255,255,0.3);
     min-width: 35rem;
     min-height: 20rem;
@@ -51,7 +50,7 @@
 
 .divider {
     content: " ";
-    border-top: goldenrod;
+    border-top: solid 2px goldenrod;
     width: 15%;
 }
 
