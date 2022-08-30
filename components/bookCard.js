@@ -18,7 +18,7 @@ export default function BookCard ( { book } ) {
           <div className= { cardStyle.bookDescription }>
             <a href= { book.read_link }><h2 className={ cardStyle.bookTitle }> { book.title } </h2></a>
             <h3 className={ cardStyle.bookAuthor }> { book.author } </h3>
-            <p> { book.additional_authors } </p>
+            { book.additional_authors ? <p> { book.additional_authors } </p> : null}
             <p>ISBN: { book.isbn ? book.isbn : "N/A"} </p>
             <div className= { cardStyle.additionalDetails}>
                 <p> Year: {book.year_published ? book.year_published : "N/A"} </p>
