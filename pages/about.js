@@ -33,6 +33,7 @@ export default function About() {
                 height={244}
                 width={400}
                 className={utilStyles.aboutImage}
+                placeholder="blur"
                 alt="King Solomon"
             />
             <span className={utilStyles.imageCaption}>King Solomon</span>
@@ -61,13 +62,12 @@ export default function About() {
         <section className={utilStyles.aboutBlock}>
           
           <div className={utilStyles.imageBlock}>
-              <Image
+              <div className={utilStyles.imgWrapper}><Image
                   src="/Images/profile.JPG"
                   height={244}
                   width={244}
-                  className={utilStyles.aboutImage}
                   alt="Lee Gill"
-              />
+              /></div>
               <span className={utilStyles.imageCaption}>Lee Gill</span>
           </div>
         
