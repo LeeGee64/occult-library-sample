@@ -24,7 +24,7 @@ export default function Home({ bookList }) {
           Your quest for esoteric knowledge begins here.
         </h2>
         <div className= {utilStyles.centerRowBlock}>
-          <div className= {utilStyles.columnBlock}>
+          <div className= {utilStyles.centerColumnBlock}>
             <p>Don't know how to start? Click the button below for a random selection.</p>
             <button className= {utilStyles.button} type= "button" onClick={ () => getRandom({ bookList })}>
               Random Book 
