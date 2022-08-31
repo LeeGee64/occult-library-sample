@@ -1,10 +1,33 @@
+.cover {
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
+}
+
 .bookCard {
     border-radius: 10px;
     margin: 1.5rem;
     background-color: rgba(255,255,255,0.3);
-    min-width: 35rem;
-    min-height: 20rem;
+    min-width: 250px;
+    min-height: 350px;
     padding: 1rem;
+}
+
+.expand {
+    border-radius: 10px;
+    padding: 0.5rem;
+    background: black;
+    color: white;
+    font-style: 'Lora';
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.expand:hover {
+    box-shadow: 2px 2px 3px black;
+    color: goldenrod;
+    border: 2px solid black;
+    background: white;
 }
 
 .bookCard:hover  {
@@ -21,6 +44,7 @@
     padding: 1rem;
     background: white;
     border-radius: 10px; 
+    overflow: hidden;
 }
 
 .bookDescription {

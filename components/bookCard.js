@@ -11,10 +11,10 @@ export default function BookCard ( { book } ) {
 
     return (
      
-      <div className= {cardStyle.bookCard} onClick={() => setToggle(!toggle)}>
+      <div className= {cardStyle.bookCard}>
       <MotionConfig transition= {{duration: 1}}>
         <div className= {cardStyle.cardContent}>
-         
+         <div className= {cardStyle.cover}>
           <div style={{ position: 'relative' }}><a href= { book.read_link }><Image 
             src= { `/Images/book_covers/${book.cover_image_src}` }
             layout="fixed"
@@ -23,6 +23,11 @@ export default function BookCard ( { book } ) {
             height= {300}
             alt= { book.title }
           /></a></div>
+
+          <button className= {cardStyle.expand} type= "button" onClick={() => setToggle(!toggle)}>
+            {toggle ? "Close" : "Expand"}
+          </button>
+          </div>
           
           {toggle ? (<motion.div 
                       key={toggle}
