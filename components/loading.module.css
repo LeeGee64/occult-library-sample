@@ -19,6 +19,10 @@
     letter-spacing: 0.5rem;
 }
 
+/* .loadingImage {
+    border: 2px solid white;
+} */
+
 .none {
     display: none;
 }
