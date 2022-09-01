@@ -13,14 +13,6 @@
     padding: 1rem;
 }
 
-.expanded {
-    z-index: 1;
-}
-
-.closed {
-    z-index:auto;
-}
-
 .expandToggle {
     border-radius: 10px;
     padding: 0.5rem;

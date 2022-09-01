@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
+import { AnimatePresence, motion} from "framer-motion";
 import React, { useState } from 'react';
 import cardStyle from './bookCard.module.css';
 
@@ -11,7 +11,6 @@ export default function BookCard ( { book } ) {
     return (
       <motion.div 
       whileHover= {{ scale: 1.05, transition: {duration: 0.2} }} 
-      style= {toggle ? {zIndex: 10} : {zIndex: 'auto'}}
       className= {cardStyle.bookCard}>
         <div className= {cardStyle.cardContent}>
          <div className= {cardStyle.cover}>

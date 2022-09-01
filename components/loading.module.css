@@ -1,0 +1,24 @@
+.bodyLoading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5rem;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    background: black;
+    position: absolute;
+}
+
+.loadingTitle {
+    color:white;
+    margin-top: 7rem;
+    size: 5rem;
+    letter-spacing: 0.5rem;
+}
+
+.none {
+    display: none;
+}
