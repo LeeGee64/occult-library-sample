@@ -92,7 +92,11 @@
 }
 
 @media screen and (max-width:599px){
-    .bookCard {
-      transition: scale(0.5);
-}
+  .bookTitle, .bookAuthor {
+    font-size: 1.3rem;
+  }
+
+  .additional_Authors, .additionalDetails {
+    font-size: 0.6rem
+  }
 }
