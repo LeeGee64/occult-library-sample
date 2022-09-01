@@ -257,5 +257,16 @@
 }
 
 @media screen and (max-width:599px){
-  
+    .aboutBlock {
+      flex-direction: column;
+    }
+
+    .imageBlock {
+      margin-bottom: 1rem;
+    }
+
+    .sectionText {
+      width: 85%;
+    }
+ 
   }

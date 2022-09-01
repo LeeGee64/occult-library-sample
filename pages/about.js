@@ -72,8 +72,8 @@ export default function About() {
         
           <p className= {utilStyles.sectionText}>
             I'm Lee Gill, a software developer working in the New Jersey/New York area.
-            This project stemmed from my own passion for Occult studies as well as a desire to learn and master
-            <a href="https://nextjs.org/">Next.js</a> and <a href="https://reactjs.org/">React</a> as coding technologies. Outside of programming, I am an activist fighting for police reform 
+            This project stemmed from my own passion for Occult studies as well as a desire to learn and master 
+             {' '}<a href="https://nextjs.org/">Next.js</a> and <a href="https://reactjs.org/">React</a> as coding technologies. Outside of programming, I am an activist fighting for police reform 
             as well as Ethical uses of Open Source Tehcnology. You can find me using the social media links at the bottom 
             of every page.
           </p>

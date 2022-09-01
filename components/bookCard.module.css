@@ -90,3 +90,9 @@
     font-weight: 700;
     font-style: italic;
 }
+
+@media screen and (max-width:599px){
+    .bookCard {
+      transition: scale(0.5);
+}
+}
