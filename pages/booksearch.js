@@ -48,7 +48,7 @@ return (
 
         <p>Use the form below to search through the library (not case sensitive).</p>
 
-        <form onSubmit={e => e.preventDefault()}>
+        <form className= {utilStyles.searchForm} onSubmit={e => e.preventDefault()}>
             <select id="searchValue" className= {utilStyles.searchSelect} onChange= {e => {searchValueChange(e)}}>
                 <option value="title">Title</option>
                 <option value="author">Author</option>
@@ -56,7 +56,7 @@ return (
             
             <input id="searchText" className= {utilStyles.searchInput} name="searchText" placeholder= "Enter Text" onChange= {e => {searchTextChange(e)}} value={searchContent}></input>
 
-            <ul className={utilStyles.rowBlock}>{searchArray}</ul>
+            <ul className={utilStyles.bookGallery}>{searchArray}</ul>
         </form>
     </Layout>
 )}

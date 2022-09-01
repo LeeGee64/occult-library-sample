@@ -62,6 +62,13 @@
     row-gap: 2rem;
   }
 
+  @media screen and (max-width:599px){
+    .heading2Xl, .headingXL, .tag, .randomBlurb {
+      text-align: center;
+    }
+
+  }
+
     /* ====================================================   */
    /*  =================== Index Rules ====================  */
   /*   ==================================================== */
@@ -118,8 +125,24 @@
     padding: 0.5rem;
     list-style-type: none;
     overflow-y: scroll;
-    max-width: 80%;
+    max-width: 90%;
   }
+
+  @media screen and (max-width:599px){
+      .bookGallery {
+        width: 90%;
+        padding-left: 0;
+      }
+
+      .searchInput {
+        width:70%;
+      }
+
+      .searchForm {
+        width: 100%;
+      }
+
+    }
 
    /* ====================================================   */
   /*  ================= Directory Rules ==================  */
@@ -150,6 +173,26 @@
 
   .directoryBody {
     list-style-type: none;
+  }
+
+  @media screen and (max-width:599px){
+    .directory, .directoryBody {
+      padding-left: 0;
+    }
+
+    .directory {
+      flex-wrap: wrap;
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 1rem;
+    }
+
+    .centerRow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
   }
 
   /* ====================================================   */
@@ -208,8 +251,11 @@
   width: 40%;
 }
 
-
 .goalItem {
   margin: 2rem;
   font-style: italic;
 }
+
+@media screen and (max-width:599px){
+  
+  }

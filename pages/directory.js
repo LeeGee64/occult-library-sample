@@ -13,6 +13,7 @@ export default function Directory({ bookList }) {
  return (
   <Layout>
     <h1 className={utilStyles.pageTitle}>Library Directory</h1>
+    <section className= {utilStyles.centerRow}>
     <ul className={utilStyles.directory} id="alphaDirectory">
       {alphaDirectory.map((letterHead) => (
         <Link href= {`#${letterHead}`}>
@@ -20,6 +21,7 @@ export default function Directory({ bookList }) {
         </Link>
       ))}
     </ul>
+    </section> 
       <ul className={utilStyles.directoryBody}>
         {alphaDirectory.map((letterHead) => (
             <li>

@@ -20,12 +20,12 @@ export default function Home({ bookList }) {
 
     <Layout home>
   
-        <h2>
-          Your quest for esoteric knowledge begins here.
+        <h2 className={utilStyles.tag}>
+          Your quest for esoteric knowledge begins here
         </h2>
         <div className= {utilStyles.centerRowBlock}>
           <div className= {utilStyles.centerColumnBlock}>
-            <p>Don't know how to start? Click the button below for a random selection.</p>
+            <p className= {utilStyles.randomBlurb}>Don't know how to start? Click the button below for a random selection.</p>
             <button className= {utilStyles.button} type= "button" onClick={ () => getRandom({ bookList })}>
               Random Book 
             </button>
