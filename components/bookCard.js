@@ -2,18 +2,17 @@ import Image from 'next/image';
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import React, { useState } from 'react';
 import cardStyle from './bookCard.module.css';
-import useMeasure from 'react-use-measure';
 
 
 export default function BookCard ( { book } ) {
 
   const [toggle, setToggle] = React.useState(false);
-  const [ref, { height }] = useMeasure(); 
 
     return (
-     
-      <div className= {cardStyle.bookCard}>
-      <MotionConfig transition= {{duration: 1}}>
+      <motion.div 
+      whileHover= {{ scale: 1.05, transition: {duration: 0.2} }} 
+      style= {toggle ? {zIndex: 10} : {zIndex: 'auto'}}
+      className= {cardStyle.bookCard}>
         <div className= {cardStyle.cardContent}>
          <div className= {cardStyle.cover}>
           <div style={{ position: 'relative' }}><a href= { book.read_link }><Image 
@@ -25,13 +24,11 @@ export default function BookCard ( { book } ) {
             alt= { book.title }
           /></a></div>
 
-          <button className= {cardStyle.expand} type= "button" onClick={() => setToggle(!toggle)}>
-            {toggle ? "Close" : "Expand"}
+          <button className= {cardStyle.expandToggle} type= "button" onClick={() => setToggle(!toggle)}>
+            {toggle ? "close" : "expand"}
           </button>
           </div>
           
-          <motion.div animate={{ height }}>
-          <div ref= {ref}>
           {toggle ? (
             <AnimatePresence>
             <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
@@ -48,12 +45,8 @@ export default function BookCard ( { book } ) {
             </div>
             </motion.div>
             </AnimatePresence>
-          ) : null}
-        </div>
-        </motion.div>
-        </div>
-        
-        </MotionConfig>
-      </div>
+          ) : ""}
+          </div>
+      </motion.div>
     )
 }

@@ -25,7 +25,7 @@ export default function Directory({ bookList }) {
             <li>
               <div className= {utilStyles.directoryHeader}>
                 <h2 className={utilStyles.sectionTitle} id={`${letterHead}`}>{ letterHead }</h2>
-                <Link href= "#alphaDirectory"><a>Top</a></Link>
+                <Link href= "#top"><a>Top</a></Link>
               </div>
             <ul className={utilStyles.bookGallery}>
               {bookList.filter((book)=> {if(book.title.split('')[0] === letterHead.toString() ){return book}}).map((book) => (
