@@ -26,3 +26,13 @@
 .none {
     display: none;
 }
+
+@media screen and (max-width:599px){
+    .bodyLoading {
+        row-gap: 2.5rem;
+    }
+    
+    .loadingTitle {
+        margin-top: 4rem;
+    }
+}
