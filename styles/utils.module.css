@@ -130,7 +130,7 @@
 
   @media screen and (max-width:599px){
       .bookGallery {
-        width: 100vw;
+        max-width: 100vw;
         padding-left: 0;
       }
 
