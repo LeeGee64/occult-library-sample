@@ -65,6 +65,10 @@
     padding: 1rem;
     border: solid 1px rgb(100,100,100);
   }
+
+  .header {
+    align-self: center;
+  }
   
   .nav {
     max-width: 80vw;
