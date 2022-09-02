@@ -60,15 +60,19 @@
     text-decoration: none;
   }
   
-@media screen and (max-width:699px){
+@media screen and (max-width:599px){
   .container {
     padding: 0 1rem;
     border: solid 1px rgb(100,100,100);
   }
+  
+  .nav {
+    max-width: 80vw;
+  }
 
   .navList {
     font-size: 1rem;
-    width: 70vw;
+    width: 90%;
   }
 
   .linkList {

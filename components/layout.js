@@ -33,7 +33,7 @@ export default function Layout({ children, home }) {
             </h1>
           </>
         )}
-      <nav>
+      <nav className= {styles.nav}>
           <ul className= {styles.navList}>
             <li id="Home" className= {styles.navItem}>
               <Link href= '/'>
