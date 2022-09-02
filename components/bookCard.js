@@ -14,12 +14,11 @@ export default function BookCard ( { book } ) {
       className= {cardStyle.bookCard}>
         <div className= {cardStyle.cardContent}>
          <div className= {cardStyle.cover}>
-          <div style={{ position: 'relative' }}><a href= { book.read_link }><Image 
+         {/* style={{ position: 'relative' }} */}
+          <div ><a href= { book.read_link }><Image 
             src= { `/Images/book_covers/${book.cover_image_src}` }
-            layout="fixed"
-            objectFit="contain"
-            width= {100}
-            height= {150}
+            width= {200}
+            height= {300}
             alt= { book.title }
           /></a></div>
 
