@@ -30,7 +30,7 @@
     flex-direction: column;
     background: black;
     width: 100%;
-    position: relative;
+    position: fixed;
   }
 
   .linkList {
