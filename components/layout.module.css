@@ -61,10 +61,12 @@
   
 @media screen and (max-width:599px){
   .container {
-    margin: 1rem;
-    border: solid 1px rgb(100,100,100);
+    margin: 0;
   }
 
+  .header, .main {
+    margin: 0.5rem;
+  }
   
   .nav {
     max-width: 80vw;
@@ -73,7 +75,7 @@
   .navList {
     font-size: 0.7rem;
     max-width: 90%;
-    padding-left: 1rem;
+    margin-left: 1rem;
   }
 
   .navItem {
