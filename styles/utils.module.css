@@ -130,7 +130,7 @@
 
   @media screen and (max-width:599px){
       .bookGallery {
-        width: 90%;
+        width: 100vw;
         padding-left: 0;
       }
 
@@ -178,11 +178,12 @@
   @media screen and (max-width:599px){
     .directory, .directoryBody {
       padding-left: 0;
+      width: 100vw;
+
     }
 
     .directory {
       flex-wrap: wrap;
-      width: 100%;
       padding-right: 0;
       padding-bottom: 1rem;
     }

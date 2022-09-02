@@ -96,6 +96,10 @@
     font-size: 1.3rem;
   }
 
+  .bookCard {
+    max-width: 90vw;
+  }
+
   .additional_Authors, .additionalDetails {
     font-size: 0.6rem;
   }
