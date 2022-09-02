@@ -62,6 +62,7 @@
 @media screen and (max-width:599px){
   .container {
     margin: 0;
+    padding:0.1rem
   }
 
   .header, .main {
@@ -69,13 +70,13 @@
   }
   
   .nav {
-    max-width: 80vw;
+    max-width: 80%;
   }
 
   .navList {
     font-size: 0.7rem;
     max-width: 90%;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
   }
 
   .navItem {
