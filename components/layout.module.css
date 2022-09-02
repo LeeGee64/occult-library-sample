@@ -71,8 +71,12 @@
   }
 
   .navList {
-    font-size: 1rem;
+    font-size: 0.7rem;
     width: 90%;
+  }
+
+  .navItem {
+    padding: 0.5rem;
   }
 
   .linkList {
