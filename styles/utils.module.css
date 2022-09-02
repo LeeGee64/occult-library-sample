@@ -273,7 +273,8 @@
     }
 
     .sectionText {
-      width: 85%;
+      font-size: 1.1rem;
+      width: 100%;
     }
  
   }
