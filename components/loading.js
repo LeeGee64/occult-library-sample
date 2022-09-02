@@ -13,6 +13,7 @@ export default function Loading (props){
                 src= '/Images/loading_images/sacredGeo.png' 
                 height={100}
                 width={100}
+                priority
             /></motion.div>      
         </div>
     );
