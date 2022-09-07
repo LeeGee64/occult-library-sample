@@ -10,7 +10,7 @@ export default function BookCard ( { book } ) {
 
     return (
       <AnimatePresence>
-      <motion.div 
+      {!toggle && (<motion.div 
           whileHover= {{ scale: 1.05, transition: {duration: 0.2} }} 
           className= {cardStyle.bookCard}
           key= {toggle}>
@@ -28,7 +28,7 @@ export default function BookCard ( { book } ) {
           </button>
         </div>
         </div>
-      </motion.div>
+      </motion.div>)}
     
       {toggle && (
         <AnimatePresence>
