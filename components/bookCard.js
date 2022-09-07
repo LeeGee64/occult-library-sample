@@ -4,24 +4,18 @@ import React, { useState } from 'react';
 import cardStyle from './bookCard.module.css';
 
 
-export default function BookCard ( { book } ) {
+export default function BookCard ( { bookContent } ) {
 
   const [toggle, setToggle] = React.useState(false);
 
     return (
+      <AnimatePresence>
       <motion.div 
-      whileHover= {{ scale: 1.05, transition: {duration: 0.2} }} 
-      transition= {{layout: { duration: 1, type: "spring" }}}
-      className= {cardStyle.bookCard}
-      key= {toggle}>
+          whileHover= {{ scale: 1.05, transition: {duration: 0.2} }} 
+          className= {cardStyle.bookCard}
+          key= {toggle}>
         <div className= {cardStyle.cardContent}>
-
-          
-          {toggle ? (
-        <AnimatePresence>
-         <motion.div
-          animate={{y: {intiial:-100, value:100}}}
-          style={{zIndex:100}}><div className= {cardStyle.cover}>
+        <div className= {cardStyle.cover}>
           <div ><a href= { book.read_link }><Image 
             src= { `/Images/book_covers/${book.cover_image_src}` }
             width= {200}
@@ -32,39 +26,40 @@ export default function BookCard ( { book } ) {
           <button className= {cardStyle.expandToggle} type= "button" onClick={() => setToggle(!toggle)}>
             {toggle ? "close" : "expand"}
           </button>
-          </div>
-
-            <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
-            <div className= { cardStyle.bookDescription }>   
-            <a href= { book.read_link }><h2 className={ cardStyle.bookTitle }> { book.title } </h2></a>
-            <h3 className={ cardStyle.bookAuthor }> { book.author } </h3>
-            <hr className= { cardStyle.divider }></hr>
-            { book.additional_authors ? <p> { book.additional_authors } </p> : null}
-            <p> <span className = { cardStyle.strong }>ISBN:</span> { book.isbn ? book.isbn : "N/A"} </p>
-            <div className= { cardStyle.additionalDetails}>
-                <p> <span className = { cardStyle.strong }>Year:</span> {book.year_published ? book.year_published : "N/A"} </p>
-                <p> <span className = { cardStyle.strong }>Pages:</span> { book.number_of_pages ? book.number_of_pages : "N/A"} </p>
-            </div>
-            </div>
-            </motion.div>
-            </motion.div>
-            </AnimatePresence>
-          ) : ( 
-            <div className= {cardStyle.cover}>
-          <div ><a href= { book.read_link }><Image 
-            src= { `/Images/book_covers/${book.cover_image_src}` }
-            width= {200}
-            height= {300}
-            alt= { book.title }
-          /></a></div>
-
-          <button className= {cardStyle.expandToggle} type= "button" onClick={() => setToggle(!toggle)}>
-            {toggle ? "close" : "expand"}
-          </button>
-          </div>
-
-          )}
-            </div>
+        </div>
+        </div>
       </motion.div>
-    )
+    
+      {toggle && (
+        <AnimatePresence>
+          <div className= {cardStyle.expandedBookCard}>
+            <div className= {cardStyle.cardContent}>
+              <div className= {cardStyle.cover}>
+                <div ><a href= { book.read_link }><Image 
+                  src= { `/Images/book_covers/${book.cover_image_src}` }
+                  width= {200}
+                  height= {300}
+                  alt= { book.title }
+                  /></a></div>
+
+              <button className= {cardStyle.expandToggle} type= "button" onClick={() => setToggle(!toggle)}>
+                {toggle ? "close" : "expand"}
+              </button>
+              </div>
+
+              <div className= { cardStyle.bookDescription }>   
+                <a href= { book.read_link }><h2 className={ cardStyle.bookTitle }> { book.title } </h2></a>
+                <h3 className={ cardStyle.bookAuthor }> { book.author } </h3>
+                <hr className= { cardStyle.divider }></hr>
+                { book.additional_authors ? <p> { book.additional_authors } </p> : null}
+                <p> <span className = { cardStyle.strong }>ISBN:</span> { book.isbn ? book.isbn : "N/A"} </p>
+                <div className= { cardStyle.additionalDetails}>
+                    <p> <span className = { cardStyle.strong }>Year:</span> {book.year_published ? book.year_published : "N/A"} </p>
+                    <p> <span className = { cardStyle.strong }>Pages:</span> { book.number_of_pages ? book.number_of_pages : "N/A"} </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatePresence> )} 
+    </AnimatePresence>)
 }
