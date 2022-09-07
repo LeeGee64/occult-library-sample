@@ -11,6 +11,7 @@ export default function BookCard ( { book } ) {
     return (
       <motion.div 
       whileHover= {{ scale: 1.05, transition: {duration: 0.2} }} 
+      transition= {{layout: { duration: 1, type: "spring" }}}
       className= {cardStyle.bookCard}
       key= {toggle}>
         <div className= {cardStyle.cardContent}>
