@@ -11,10 +11,16 @@ export default function BookCard ( { book } ) {
     return (
       <motion.div 
       whileHover= {{ scale: 1.05, transition: {duration: 0.2} }} 
-      className= {cardStyle.bookCard}>
+      className= {cardStyle.bookCard}
+      key= {toggle}>
         <div className= {cardStyle.cardContent}>
-         <div className= {cardStyle.cover}>
-         {/* style={{ position: 'relative' }} */}
+
+          
+          {toggle ? (
+        <AnimatePresence>
+         <motion.div
+          animate={{y: {intiial:-100, value:100}}}
+          style={{zIndex:100}}><div className= {cardStyle.cover}>
           <div ><a href= { book.read_link }><Image 
             src= { `/Images/book_covers/${book.cover_image_src}` }
             width= {200}
@@ -26,9 +32,7 @@ export default function BookCard ( { book } ) {
             {toggle ? "close" : "expand"}
           </button>
           </div>
-          
-          {toggle ? (
-            <AnimatePresence>
+
             <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
             <div className= { cardStyle.bookDescription }>   
             <a href= { book.read_link }><h2 className={ cardStyle.bookTitle }> { book.title } </h2></a>
@@ -42,9 +46,24 @@ export default function BookCard ( { book } ) {
             </div>
             </div>
             </motion.div>
+            </motion.div>
             </AnimatePresence>
-          ) : ""}
+          ) : ( 
+            <div className= {cardStyle.cover}>
+          <div ><a href= { book.read_link }><Image 
+            src= { `/Images/book_covers/${book.cover_image_src}` }
+            width= {200}
+            height= {300}
+            alt= { book.title }
+          /></a></div>
+
+          <button className= {cardStyle.expandToggle} type= "button" onClick={() => setToggle(!toggle)}>
+            {toggle ? "close" : "expand"}
+          </button>
           </div>
+
+          )}
+            </div>
       </motion.div>
     )
 }
