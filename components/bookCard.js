@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import cardStyle from './bookCard.module.css';
 
 
-export default function BookCard ( { bookContent } ) {
+export default function BookCard ( { book } ) {
 
   const [toggle, setToggle] = React.useState(false);
 
