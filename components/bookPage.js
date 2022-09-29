@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import React, { useState } from 'react';
 import cardStyle from './bookCard.module.css';
 
 export default function BookPage({ book })  {
