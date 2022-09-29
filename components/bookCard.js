@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import cardStyle from './bookCard.module.css';
 import BookPage from './bookPage'
 
-Modal.setAppElement('#__next')
+// Modal.setAppElement('#__next')
 
 export default function BookCard ( { book } ) {
 
@@ -33,8 +33,8 @@ export default function BookCard ( { book } ) {
     
       {toggle && (
         <Modal
-        // isOpen={!!router.query.postId}
-        onRequestClose={() => router.push(`\{router.asPath}`)}
+        isOpen={true}
+        onRequestClose={() => router.push(`/{router.asPath}`)}
         contentLabel="Post modal"
       >
         <BookPage book={book} />
