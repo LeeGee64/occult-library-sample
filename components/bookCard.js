@@ -33,7 +33,7 @@ export default function BookCard ( { book } ) {
     
       {toggle && (
         <Modal
-        isOpen={!!router.query.postId}
+        // isOpen={!!router.query.postId}
         onRequestClose={() => router.push('/')}
         contentLabel="Post modal"
       >
