@@ -14,7 +14,7 @@ export default function BookPage({ book })  {
                   /></a></div>
 
               <button className= {cardStyle.expandToggle} type= "button" onClick={() => setToggle(!toggle)}>
-                {toggle ? "close" : "expand"}
+               close
               </button>
               </div>
 
