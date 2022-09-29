@@ -38,15 +38,15 @@ export default function BookCard ( { book } ) {
         contentLabel="Book modal"
         style= {{
           overlay:{
-            position: 'fixed',
-            width: '70vw',
-            height: '60vh'
+            position: 'relative',
+            width: '70%',
+            height: '60%'
           },
-          content: {
-            position: 'absolute',
-            width: '60vw',
-            height: '50vh' 
-          }
+          // content: {
+          //   position: 'absolute',
+          //   width: '60vw',
+          //   height: '50vh' 
+          // }
         }}
           >
         <BookPage book={book} />
