@@ -36,18 +36,18 @@ export default function BookCard ( { book } ) {
         isOpen={true}
         onRequestClose={() => router.push(router.asPath)}
         contentLabel="Book modal"
-        style= {{
-          overlay:{
-            position: 'relative',
-            width: '70%',
-            height: '60%'
-          },
-          // content: {
-          //   position: 'absolute',
-          //   width: '60vw',
-          //   height: '50vh' 
-          // }
-        }}
+        // style= {{
+        //   overlay:{
+        //     position: 'relative',
+        //     width: '70%',
+        //     height: '60%'
+        //   },
+        //   // content: {
+        //   //   position: 'absolute',
+        //   //   width: '60vw',
+        //   //   height: '50vh' 
+        //   // }
+        // }}
           >
         <BookPage book={book} />
       </Modal>

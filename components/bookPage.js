@@ -1,10 +1,7 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
 import cardStyle from './bookCard.module.css';
 
 export default function BookPage({ book })  {
-
-    const [toggle, setToggle] = React.useState(true);
 
     return (
         <div className= {cardStyle.expandedBookCard}>
