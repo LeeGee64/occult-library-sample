@@ -34,7 +34,7 @@ export default function BookCard ( { book } ) {
       {toggle && (
         <Modal
         // isOpen={!!router.query.postId}
-        onRequestClose={() => router.push('/')}
+        onRequestClose={() => router.push(`\{router.asPath}`)}
         contentLabel="Post modal"
       >
         <BookPage book={book} />
