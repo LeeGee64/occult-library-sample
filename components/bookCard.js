@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import cardStyle from './bookCard.module.css';
 import BookPage from './bookPage'
 
-// Modal.setAppElement('#__next')
+Modal.setAppElement('#__next');
 
 export default function BookCard ( { book } ) {
 
@@ -31,10 +31,10 @@ export default function BookCard ( { book } ) {
         </div>
       </div>
     
-      {toggle && (
+      
         <Modal
-        isOpen={true}
-        onRequestClose={() => router.push(router.asPath)}
+        isOpen={toggle}
+        onRequestClose={() => setToggle(!toggle)}
         contentLabel="Book modal"
         // style= {{
         //   overlay:{
@@ -42,15 +42,15 @@ export default function BookCard ( { book } ) {
         //     width: '70%',
         //     height: '60%'
         //   },
-        //   // content: {
-        //   //   position: 'absolute',
-        //   //   width: '60vw',
-        //   //   height: '50vh' 
-        //   // }
+        //   content: {
+        //     position: 'absolute',
+        //     width: '60vw',
+        //     height: '50vh' 
+        //   }
         // }}
           >
         <BookPage book={book} />
       </Modal>
-       )} 
+       
     </>
 )}

@@ -13,10 +13,6 @@ export default function BookPage({ book })  {
                   height= {300}
                   alt= { book.title }
                   /></a></div>
-
-              <button className= {cardStyle.expandToggle} type= "button" onClick={() => setToggle(!toggle)}>
-               close
-              </button>
               </div>
 
               <div className= { cardStyle.bookDescription }>   
