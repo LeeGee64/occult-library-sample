@@ -1,4 +1,21 @@
-## Example app using MongoDB
+# Library of Solomon 
+
+An elegent library app designed to ease exploration into the world of Spiritualism and the Occult. Users will be able to look through a wide selection of books with links to GoodRead where they can learn more about their selections and make purchases.
+
+
+## The Process
+
+This project was created using the following technologies:- HTML, JAVASCRIPT, CSS, NODE.js, Json, Next.Js, MongoDB. Thanks to Next.Js's ability to integrate well and call data from MongoDB, I was able to create a flat Database in Mongo using book information taken from GoodReads. Designing the app's current features (random book select, directory display, dynamic search) was then a matter of manipulating statically generated props on the client's side. The book cover images are stored clientside for now.
+
+
+## Optimization
+
+* *Image Hosting:* Right now, the book cover images are stored in a public asset file just for access ease. This is a fine solution now while the book selection is relatively low, but will become untenable as the library grows in size and users. Finding an image hosting backend will be key for the app to scale effectively. 
+* *Dynamic Page Creation:* Links to GoodReads are an effective way for users to find out more information about the books that interest them. The app currently displays basic information once a user expands a book card (e.g. Authors, Publishing Date, etc). With dynamic pages, I would be able to include more information about each book and allow users to link to specific books via URL. I also want to add modal displays just for aesthethic purposes
+* *User Features:* By allowing users to create personal accounts, I will be able to give them a more robust experience through things like logging their vieiwng history, allowing them to mark their favorite selections, or even creating wishlists for later purchases. Configuring authorization in Next.Js is a straightforward and well-documented process. It's matter of finding out what works best. 
+
+
+## Write-up from MongoDB 
 
 [MongoDB](https://www.mongodb.com/) is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. This example will show you how to connect to and use MongoDB as your backend for your Next.js app.
 
@@ -7,76 +24,3 @@ If you want to learn more about MongoDB, visit the following pages:
 - [MongoDB Atlas](https://mongodb.com/atlas)
 - [MongoDB Documentation](https://docs.mongodb.com/)
 
-## Deploy your own
-
-Once you have access to the environment variables you'll need, deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=with-mongodb&repository-name=with-mongodb&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-mongodb&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-mongodb with-mongodb-app
-```
-
-```bash
-yarn create next-app --example with-mongodb with-mongodb-app
-```
-
-```bash
-pnpm create next-app --example with-mongodb with-mongodb-app
-```
-
-## Configuration
-
-### Set up a MongoDB database
-
-Set up a MongoDB database either locally or with [MongoDB Atlas for free](https://mongodb.com/atlas).
-
-### Set up environment variables
-
-Copy the `env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
-
-```bash
-cp .env.local.example .env.local
-```
-
-Set each variable on `.env.local`:
-
-- `MONGODB_URI` - Your MongoDB connection string. If you are using [MongoDB Atlas](https://mongodb.com/atlas) you can find this by clicking the "Connect" button for your cluster.
-
-### Run Next.js in development mode
-
-```bash
-npm install
-npm run dev
-
-# or
-
-yarn install
-yarn dev
-```
-
-Your app should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
-
-You will either see a message stating "You are connected to MongoDB" or "You are NOT connected to MongoDB". Ensure that you have provided the correct `MONGODB_URI` environment variable.
-
-When you are successfully connected, you can refer to the [MongoDB Node.js Driver docs](https://mongodb.github.io/node-mongodb-native/3.4/tutorials/collections/) for further instructions on how to query your database.
-
-## Deploy on Vercel
-
-You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-#### Deploy Your Local Project
-
-To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [import to Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example).
-
-**Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
-
-#### Deploy from Our Template
-
-Alternatively, you can deploy using our template by clicking on the Deploy button below.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=with-mongodb&repository-name=with-mongodb&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-mongodb&integration-ids=oac_jnzmjqM10gllKmSrG0SGrHOH)
